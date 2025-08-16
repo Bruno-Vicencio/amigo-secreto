@@ -34,3 +34,16 @@ function mostrarLista() {
     });
 }
 
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Agrega al menos un amigo antes de sortear.");
+        return;
+    }
+
+    let indice = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indice];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>🎉 Tu amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
+}
